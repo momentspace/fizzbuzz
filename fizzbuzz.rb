@@ -1,30 +1,22 @@
 class FizzBuzz
 	def fizzbuzz(x)
-		x % 3 == 0 && x % 5 == 0
-	end
-
-	def fizz(x)
-		x % 3 == 0
-	end
-
-	def buzz(x)
-		x % 5 == 0
+    if x % 3 == 0 && x % 5 == 0
+      "fizzbuzz"
+    elsif x % 3 == 0
+      "fizz"
+    elsif x % 5 == 0
+      "buzz"
+    else
+      x
+    end
 	end
 
 	def main
 		1.upto(100) do |x|
-			if fizzbuzz(x)
-			       	puts "fizzbuzz"
-			elsif fizz(x)
-			       	puts "fizz"
-			elsif buzz(x)
-			       	puts "buzz"
-			else
-				puts x
-			end
+      puts fizzbuzz(x)
 		end
 	end
 end
 
-
+FizzBuzz.new.main
 
